@@ -1,7 +1,5 @@
 package learn.agile.demos.steps;
 
-import static org.junit.Assert.assertEquals;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -37,9 +35,10 @@ public class DemoSteps {
 	 * @param sum
 	 * @throws Throwable
 	 */
-	@Then("^the result is (-?\\d+)$")
-	public void the_result_is(final int sum) throws Throwable {
-		assertEquals(demoPage.getCalculatorResults(), sum);
+	@SuppressWarnings("deprecation")
+	@Then("^the result is (-?\\d+\\.?\\d*)$")
+	public void the_result_is(final float sum) throws Throwable {
+		assert (new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
 	}
 
 	/**
@@ -47,8 +46,8 @@ public class DemoSteps {
 	 * @param arg2
 	 * @throws Exception
 	 */
-	@When("^I subtract the numbers (-?\\d+) and (-?\\d+)$")
-	public void i_subtract_the_numbers_and(final int arg1, final int arg2) throws Exception {
-		demoPage.subtractNumbers(arg1, arg2);
+	@When("^I subtract the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
+	public void i_subtract_the_numbers_and(final float x, final float y) throws Exception {
+		demoPage.subtractNumbers(x, y);
 	}
 }
