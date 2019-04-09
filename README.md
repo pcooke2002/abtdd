@@ -79,10 +79,10 @@ Start the web app using Maven on http://localhost:8080:
 compile and test:
 ```mvn clean install````
 
-run site
+run site:
 ``` mvn site:run```
 
-run spotbugs gui
+run spotbugs gui:
 ```mvn spotbugs:gui```
 
 
