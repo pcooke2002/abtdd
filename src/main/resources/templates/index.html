@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Spring Angular and Calculator Automated Test Driven Design Demo</title>
+
+    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css"
+          th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}" rel="stylesheet" media="screen"/>
+    <link href="/css/narrow.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp">
+
+
+
+
+<div class="container">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">About</a></li>
+                <li role="presentation"><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">Spring Angular Cucumber Demo</h3>
+    </div>
+
+    
+
+    <div class="well well-lg text-center" ng-controller="calculatorController">
+        <h2>Calculator</h2>
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-4 control-label">First Number: </label>
+                <div class="col-sm-8">
+                    <input id="first-number" class="form-control" ng-model="firstNumber" type="text"/>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-4 control-label">Second Number: </label>
+                <div class="col-sm-8">
+                    <input id="second-number" class="form-control" ng-model="secondNumber" type="text"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <button id="adder-button" class="btn btn-lg btn-success" ng-click="add()">+</button>
+                <button id="subtracter-button" class="btn btn-lg btn-success" ng-click="subtract()">-</button>
+                <button id="multiplyer-button" class="btn btn-lg btn-success" ng-click="multiply()">*</button>
+                <button id="divider-button" class="btn btn-lg btn-success" ng-click="divide()">/</button>
+            </div>
+        </form>
+
+
+            <span id="calculator-result" style="font-size: 500%">{{calculatorResult}}</span>
+
+
+   </div>
+</div> <!-- /container -->
+
+<script src="http://cdn.jsdelivr.net/webjars/angularjs/1.5.0/angular.min.js"
+        th:src="@{/webjars/angularjs/1.6.6/angular.min.js}"></script>
+<script type="text/javascript" src="../js/app.js"
+        th:src="@{/js/app.js}"></script>
+</body>
+</html>
