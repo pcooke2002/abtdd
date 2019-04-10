@@ -1,7 +1,5 @@
 package learn.agile.demos.controllers;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,13 +27,28 @@ public class CalculatorControllerIT {
 	CalculatorController calculatorController;
 
 	/**
+	 * ensure existing integer tests continue to work
+	 * 
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
-	public void testMultiplyer() throws Exception {
-		assertEquals(0, calculatorController.multiplyer(1, 0));
-		assertEquals(2, calculatorController.multiplyer(2, 1));
-		assertEquals(500, calculatorController.multiplyer(100, 5));
-		assertEquals(-2200, calculatorController.multiplyer(100, -22));
+	public void testIntegerMultiplyer() throws Exception {
+		assert (new Float(0f).equals(new Float(calculatorController.multiplyer(1f, 0f))));
+		assert (new Float(-2f).equals(new Float(calculatorController.multiplyer(-2f, 1f))));
+		assert (new Float(-500f).equals(new Float(calculatorController.multiplyer(100f, -5f))));
+		assert (new Float(2200f).equals(new Float(calculatorController.multiplyer(-100f, -22f))));
+	}
+
+	/**
+	 * @throws Exception
+	 */
+	@SuppressWarnings("deprecation")
+	@Test
+	public void testDecimalMultiplyer() throws Exception {
+		assert (new Float(0.77197933f).equals(new Float(calculatorController.multiplyer(2.323f, 0.33232f))));
+		assert (new Float(-0.77197933f).equals(new Float(calculatorController.multiplyer(-2.323f, 0.33232f))));
+		assert (new Float(-0.77197933f).equals(new Float(calculatorController.multiplyer(2.323f, -0.33232f))));
+		assert (new Float(0.77197933f).equals(new Float(calculatorController.multiplyer(-2.323f, -0.33232f))));
 	}
 }

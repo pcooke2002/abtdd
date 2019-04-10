@@ -24,12 +24,12 @@ public class CalculatorController {
      * Controller add function.
      * @param firstNumber First Operand.
      * @param secondNumber Second Operand.
-     * @return int The result of the add operation
+     * @return float The result of the add operation
      */
     @RequestMapping("/multiplyer")
-    public final int multiplyer(
-            @RequestParam(value = "firstNumber", defaultValue = "0") final int firstNumber,
-            @RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
+    public final float multiplyer(
+            @RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
         return calculatorService.multiply(firstNumber, secondNumber);
     }
 }

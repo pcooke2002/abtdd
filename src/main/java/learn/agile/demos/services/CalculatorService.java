@@ -19,7 +19,7 @@ public class CalculatorService {
      * @param y Second Operand.
      * @return the result of the multiplication
      */
-    public final int multiply(final int x, final int y) {
+    public final float multiply(final float x, final float y) {
         return x * y;
     }
 }

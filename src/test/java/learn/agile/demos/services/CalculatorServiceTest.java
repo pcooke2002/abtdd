@@ -1,7 +1,5 @@
 package learn.agile.demos.services;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 
 /**
@@ -14,24 +12,48 @@ public class CalculatorServiceTest {
 	/**
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testMultipyInteger() throws Exception {
-		assertEquals(0, calculatorService.multiply(1, 0));
-		assertEquals(1, calculatorService.multiply(1, 1));
-		assertEquals(25, calculatorService.multiply(5, 5));
-		assertEquals(1875, calculatorService.multiply(75, 25));
+		assert (new Float(0f).equals(new Float(calculatorService.multiply(1f, 0f))));
+		assert (new Float(1f).equals(new Float(calculatorService.multiply(1f, 1f))));
+		assert (new Float(25f).equals(new Float(calculatorService.multiply(5f, 5f))));
+		assert (new Float(1875f).equals(new Float(calculatorService.multiply(25f, 75f))));
 	}
 
 	/**
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testMultiplyWithNegativeInteger() throws Exception {
-		assertEquals(0, calculatorService.multiply(-1, 0));
-		assertEquals(1, calculatorService.multiply(-1, -1));
-		assertEquals(-1, calculatorService.multiply(1, -1));
-		assertEquals(-50, calculatorService.multiply(5, -10));
-		assertEquals(-1875, calculatorService.multiply(-75, 25));
+		assert (new Float(-0f).equals(new Float(calculatorService.multiply(-1f, 0f))));
+		assert (new Float(1f).equals(new Float(calculatorService.multiply(-1f, -1f))));
+		assert (new Float(-25f).equals(new Float(calculatorService.multiply(5f, -5f))));
+		assert (new Float(25f).equals(new Float(calculatorService.multiply(-5f, -5f))));
 	}
 
+	/**
+	 * @throws Exception
+	 */
+	@SuppressWarnings("deprecation")
+	@Test
+	public void testMultipyDecimal() throws Exception {
+		assert (new Float(0f).equals(new Float(calculatorService.multiply(1.222f, 0f))));
+		assert (new Float(1.233f).equals(new Float(calculatorService.multiply(1.233f, 1f))));
+		assert (new Float(26.17115f).equals(new Float(calculatorService.multiply(5f, 5.23423f))));
+		assert (new Float(26.810774f).equals(new Float(calculatorService.multiply(5.1222f, 5.23423f))));
+	}
+
+	/**
+	 * @throws Exception
+	 */
+	@SuppressWarnings("deprecation")
+	@Test
+	public void testMultiplyWithNegativeDecimal() throws Exception {
+		assert (new Float(-0f).equals(new Float(calculatorService.multiply(-1.34534f, 0f))));
+		assert (new Float(1.8063351f).equals(new Float(calculatorService.multiply(-1.345f, -1.343f))));
+		assert (new Float(-28.53162f).equals(new Float(calculatorService.multiply(5.34f, -5.343f))));
+		assert (new Float(28.376348f).equals(new Float(calculatorService.multiply(-5.434f, -5.222f))));
+	}
 }

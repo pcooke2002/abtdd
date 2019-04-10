@@ -1,7 +1,5 @@
 package learn.agile.demos;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +22,12 @@ public class DemoPageIT {
 	/**
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void simpleMultiplyTest() throws Exception {
 		demoPage.go();
-		demoPage.multiplyNumbers(5, 5);
+		demoPage.multiplyNumbers(5f, 5f);
 		Thread.sleep(100); // web driver on some OSs respond too quickly
-		assertEquals(25, demoPage.getCalculatorResults());
+		assert (new Float(25f).equals(new Float(demoPage.getCalculatorResults())));
 	}
 }

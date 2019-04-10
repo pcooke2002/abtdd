@@ -1,7 +1,5 @@
 package learn.agile.demos.steps;
 
-import static org.junit.Assert.assertEquals;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
@@ -20,7 +18,6 @@ import learn.agile.demos.pages.DemoPage;
 @SpringBootTest(classes = DemoApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @ContextConfiguration(classes = { CucumberConfiguration.class })
 public class DemoSteps {
-	int count = 0;
 
 	@Autowired
 	DemoPage demoPage;
@@ -37,9 +34,10 @@ public class DemoSteps {
 	 * @param sum
 	 * @throws Throwable
 	 */
-	@Then("^the result is (-?\\d+)$")
-	public void the_result_is(final int sum) throws Throwable {
-		assertEquals(demoPage.getCalculatorResults(), sum);
+	@SuppressWarnings("deprecation")
+	@Then("^the result is (-?\\d+\\.?\\d*)$")
+	public void the_result_is(final float sum) throws Throwable {
+		assert (new Float(sum).equals(new Float(demoPage.getCalculatorResults())));
 	}
 
 	/**
@@ -47,8 +45,8 @@ public class DemoSteps {
 	 * @param y
 	 * @throws Throwable
 	 */
-	@When("^I multiply the numbers (-?\\d+) and (-?\\d+)$")
-	public void iMultiplyTheNumbersAnd(int x, int y) throws Throwable {
+	@When("^I multiply the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
+	public void iMultiplyTheNumbersAnd(final float x, final float y) throws Throwable {
 		demoPage.multiplyNumbers(x, y);
 	}
 }
