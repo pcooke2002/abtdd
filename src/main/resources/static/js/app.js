@@ -23,5 +23,11 @@ myApp.controller("calculatorController", function($http, $scope) {
         function(response){
             $scope.calculatorResult = response.data;
         });
+    },
+   $scope.subtract =  function() {
+        $http.get('/subtracter',{params:{firstNumber: $scope.firstNumber, secondNumber: $scope.secondNumber}}).then(
+        function(response){
+            $scope.calculatorResult = response.data;
+        });
     }
 });
