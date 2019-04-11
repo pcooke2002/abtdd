@@ -53,4 +53,15 @@ public class DemoPageIT {
 		Thread.sleep(100); // web driver on some OSs respond too quickly
 		assertEquals(25, demoPage.getCalculatorResults());
 	}
+	
+	/**
+	 * @throws Exception
+	 */
+	@Test
+	public void simpleDivideTest() throws Exception {
+		demoPage.go();
+		demoPage.divideNumbers(5, 5);
+		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
+		assertEquals(1, demoPage.getCalculatorResults());
+	}
 }

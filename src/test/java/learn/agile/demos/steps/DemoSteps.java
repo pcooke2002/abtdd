@@ -71,4 +71,15 @@ public class DemoSteps {
 	public void iMultiplyTheNumbersAnd(int x, int y) throws Throwable {
 		demoPage.multiplyNumbers(x, y);
 	}
+
+
+	/**
+	 * @param x
+	 * @param y
+	 * @throws Throwable
+	 */
+	@When("^I divide the numbers (\\d+) by  (\\d+)$")
+	public void iDivideTheNumbersBy(final int x, final int y) throws Throwable {
+		demoPage.divideNumbers(x, y);
+	}
 }

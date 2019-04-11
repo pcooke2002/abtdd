@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class CalculatorService {
+
     /**
      * a variable for spotbugs to find.
      */
@@ -15,16 +16,18 @@ public class CalculatorService {
 
     /**
      * add 2 numbers.
+     * 
      * @param x First Operand.
      * @param y Second Operand.
      * @return the result of the addition
      */
     public final int add(final int x, final int y) {
         return x + y;
-}
+    }
 
     /**
      * subtract 2 numbers.
+     * 
      * @param x First Operand.
      * @param y Second Operand.
      * @return the result of the subtraction
@@ -35,11 +38,23 @@ public class CalculatorService {
 
     /**
      * multiply 2 numbers.
+     * 
      * @param x First Operand.
      * @param y Second Operand.
      * @return the result of the multiplication
      */
     public final int multiply(final int x, final int y) {
         return x * y;
+    }
+
+    /**
+     * divide 2 numbers.
+     * 
+     * @param x First Operand.
+     * @param y Second Operand.
+     * @return the result of the divide.
+     */
+    public final int divide(final int x, final int y) {
+        return x / y;
     }
 }

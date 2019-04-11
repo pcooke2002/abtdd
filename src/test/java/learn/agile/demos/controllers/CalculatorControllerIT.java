@@ -24,16 +24,16 @@ public class CalculatorControllerIT {
 
 	@Autowired
 	CalculatorController calculatorController;
-	
+
 	/**
-     * @throws Exception
-     */
-    @Test
+	 * @throws Exception
+	 */
+	@Test
 	public void testAdder() throws Exception {
-        assertEquals(2, calculatorController.adder(1, 1));
-        assertEquals(3, calculatorController.adder(2, 1));
-        assertEquals(1000, calculatorController.adder(999, 1));
-    }
+		assertEquals(2, calculatorController.adder(1, 1));
+		assertEquals(3, calculatorController.adder(2, 1));
+		assertEquals(1000, calculatorController.adder(999, 1));
+	}
 
 	/**
 	 * @throws Exception
@@ -47,7 +47,7 @@ public class CalculatorControllerIT {
 		assertEquals(-3, calculatorController.subtracter(-2, 1));
 		assertEquals(29, calculatorController.subtracter(-2, -31));
 	}
-	
+
 	/**
 	 * @throws Exception
 	 */
@@ -57,5 +57,14 @@ public class CalculatorControllerIT {
 		assertEquals(2, calculatorController.multiplyer(2, 1));
 		assertEquals(500, calculatorController.multiplyer(100, 5));
 		assertEquals(-2200, calculatorController.multiplyer(100, -22));
+	}
+
+	/**
+	 * @throws Exception
+	 */
+	@Test
+	public void testDivider() throws Exception {
+		assertEquals(2, calculatorController.divider(2, 1));
+		assertEquals(20, calculatorController.divider(100, 5));
 	}
 }
