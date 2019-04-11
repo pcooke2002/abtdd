@@ -27,9 +27,9 @@ public class CalculatorController {
      * @return int The result of the divide operation
      */
     @RequestMapping("/divider")
-    public final int divider(
-            @RequestParam(value = "firstNumber", defaultValue = "0") final int firstNumber,
-            @RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
+    public final float divider(
+            @RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
         return calculatorService.divide(firstNumber, secondNumber);
     }
 }

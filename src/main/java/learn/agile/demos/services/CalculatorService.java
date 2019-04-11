@@ -19,7 +19,7 @@ public class CalculatorService {
      * @param y Second Operand.
      * @return the result of the divide.
      */
-    public int divide(final int x, final int y) {
+    public float divide(final float x, final float y) {
         return x / y;
     }
 }
