@@ -28,6 +28,7 @@ public class CalculatorControllerIT {
 	/**
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void testDivider() throws Exception {
 		assert (new Float(2f).equals(new Float(calculatorController.divider(2f, 1f))));
