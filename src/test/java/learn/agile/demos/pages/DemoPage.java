@@ -71,6 +71,15 @@ public class DemoPage {
 		driver.findElement(By.id("first-number")).sendKeys(Float.toString(x));
 		driver.findElement(By.id("second-number")).sendKeys(Float.toString(y));
 		driver.findElement(By.id("subtracter-button")).click();
+	}
 
+    /**
+	 * @param x
+	 * @param y
+	 */
+	public void multiplyNumbers(final float x, final float y) {
+		driver.findElement(By.id("first-number")).sendKeys(Float.toString(x));
+		driver.findElement(By.id("second-number")).sendKeys(Float.toString(y));
+		driver.findElement(By.id("multiplyer-button")).click();
 	}
 }

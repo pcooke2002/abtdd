@@ -14,7 +14,7 @@ import learn.agile.demos.services.CalculatorService;
 @RestController
 public class CalculatorController {
 
-     /**
+    /**
      * Calculator service.
      */
     @Autowired
@@ -22,27 +22,40 @@ public class CalculatorController {
 
     /**
      * Controller add function.
-     * @param firstNumber First Operand.
+     *
+     * @param firstNumber  First Operand.
      * @param secondNumber Second Operand.
      * @return float The result of the add operation
      */
     @RequestMapping("/adder")
-    public final float adder(
-            @RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+    public final float adder(@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
             @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
         return calculatorService.add(firstNumber, secondNumber);
     }
 
     /**
      * Controller subtract function.
-     * @param firstNumber First Operand.
+     *
+     * @param firstNumber  First Operand.
      * @param secondNumber Second Operand.
      * @return int The result of the subtract operation
      */
     @RequestMapping("/subtracter")
-    public final float subtracter(
-            @RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+    public final float subtracter(@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
             @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
         return calculatorService.subtract(firstNumber, secondNumber);
+    }
+
+    /**
+     * Controller multiply function.
+     *
+     * @param firstNumber  First Operand.
+     * @param secondNumber Second Operand.
+     * @return int The result of the multiplication operation
+     */
+    @RequestMapping("/multiplyer")
+    public final float multiplyer(@RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
+        return calculatorService.multiply(firstNumber, secondNumber);
     }
 }

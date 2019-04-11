@@ -33,5 +33,15 @@ public class CalculatorService {
      */
     public final float subtract(final float x, final float y) {
         return x - y;
+
+    }
+
+    /**
+     * @param x First Operand.
+     * @param y Second Operand.
+     * @return the result of the multiplication
+     */
+    public final float multiply(final float x, final float y) {
+        return x * y;
     }
 }

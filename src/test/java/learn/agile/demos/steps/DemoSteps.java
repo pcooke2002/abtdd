@@ -29,7 +29,8 @@ public class DemoSteps {
 	public void i_am_on_the_demo_page() throws Throwable {
 		demoPage.go();
 	}
-	
+
+
 	/**
 	 * @param sum
 	 * @throws Throwable
@@ -58,5 +59,16 @@ public class DemoSteps {
 	@When("^I subtract the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
 	public void i_subtract_the_numbers_and(final float x, final float y) throws Exception {
 		demoPage.subtractNumbers(x, y);
+	}
+
+
+	/**
+	 * @param arg1
+	 * @param arg2
+	 * @throws Exception
+	 */
+	@When("^I multiply the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
+	public void iMultiplyTheNumbersAnd(final float x, final float y) throws Throwable {
+		demoPage.multiplyNumbers(x, y);
 	}
 }
