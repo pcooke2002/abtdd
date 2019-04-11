@@ -43,7 +43,17 @@ public class DemoPage {
 	}
 
 	/**
-	 * @return results
+	 * @param x
+	 * @param y
+	 */
+	public void multiplyNumbers(final int x, final int y) {
+		driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));
+		driver.findElement(By.id("second-number")).sendKeys(Integer.toString(y));
+		driver.findElement(By.id("multiplyer-button")).click();
+	}
+
+	/**
+	 * @return int results.
 	 * @throws InterruptedException
 	 */
 	public int getCalculatorResults() throws InterruptedException {

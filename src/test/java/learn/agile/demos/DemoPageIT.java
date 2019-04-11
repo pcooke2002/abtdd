@@ -42,4 +42,15 @@ public class DemoPageIT {
 		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
 		assertEquals(0, demoPage.getCalculatorResults());
 	}
+	
+	/**
+	 * @throws Exception
+	 */
+	@Test
+	public void simpleMultiplyTest() throws Exception {
+		demoPage.go();
+		demoPage.multiplyNumbers(5, 5);
+		Thread.sleep(100); // web driver on some OSs respond too quickly
+		assertEquals(25, demoPage.getCalculatorResults());
+	}
 }

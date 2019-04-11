@@ -47,4 +47,15 @@ public class CalculatorControllerIT {
 		assertEquals(-3, calculatorController.subtracter(-2, 1));
 		assertEquals(29, calculatorController.subtracter(-2, -31));
 	}
+	
+	/**
+	 * @throws Exception
+	 */
+	@Test
+	public void testMultiplyer() throws Exception {
+		assertEquals(0, calculatorController.multiplyer(1, 0));
+		assertEquals(2, calculatorController.multiplyer(2, 1));
+		assertEquals(500, calculatorController.multiplyer(100, 5));
+		assertEquals(-2200, calculatorController.multiplyer(100, -22));
+	}
 }

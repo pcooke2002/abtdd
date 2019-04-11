@@ -34,6 +34,15 @@ public class DemoSteps {
 	}
 
 	/**
+	 * @param sum
+	 * @throws Throwable
+	 */
+	@Then("^the result is (-?\\d+)$")
+	public void the_result_is(final int sum) throws Throwable {
+		assertEquals(demoPage.getCalculatorResults(), sum);
+	}
+	
+	/**
 	 * @param x
 	 * @param y
 	 * @throws Throwable
@@ -44,15 +53,6 @@ public class DemoSteps {
 	}
 
 	/**
-	 * @param sum
-	 * @throws Throwable
-	 */
-	@Then("^the result is (-?\\d+)$")
-	public void the_result_is(final int sum) throws Throwable {
-		assertEquals(demoPage.getCalculatorResults(), sum);
-	}
-
-	/**
 	 * @param arg1
 	 * @param arg2
 	 * @throws Exception
@@ -60,5 +60,15 @@ public class DemoSteps {
 	@When("^I subtract the numbers (-?\\d+) and (-?\\d+)$")
 	public void i_subtract_the_numbers_and(final int arg1, final int arg2) throws Exception {
 		demoPage.subtractNumbers(arg1, arg2);
+	}
+	
+	/**
+	 * @param x
+	 * @param y
+	 * @throws Throwable
+	 */
+	@When("^I multiply the numbers (-?\\d+) and (-?\\d+)$")
+	public void iMultiplyTheNumbersAnd(int x, int y) throws Throwable {
+		demoPage.multiplyNumbers(x, y);
 	}
 }

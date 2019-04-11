@@ -16,6 +16,8 @@
 	<packaging>jar</packaging>
 
 
+
+
 	<name>atdd demo</name>
 	<description>Demo project for teaching ATDD and BDD using Spring Boot</description>
 
@@ -234,7 +236,7 @@
 					</plugins>
 				</configuration>
 			</plugin>
-	
+
 		</plugins>
 	</build>
 	<reporting>
@@ -315,6 +317,16 @@
 					<simpleHTMLChangeLogFilename>gitlog.html</simpleHTMLChangeLogFilename>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-project-info-reports-plugin</artifactId>
+				<version>3.0.0</version>
+				<configuration>
+					<webAccessUrl>https://github.com/pcooke2002/abtdd</webAccessUrl>
+					<anonymousConnection>scm:git:https://github.com/pcooke2002/abtdd.git</anonymousConnection>
+				</configuration>
+			</plugin>
+			
 		</plugins>
 	</reporting>
 </project>

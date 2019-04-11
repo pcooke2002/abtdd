@@ -27,9 +27,19 @@ public class CalculatorService {
      * subtract 2 numbers.
      * @param x First Operand.
      * @param y Second Operand.
-     * @return the result of the addition
+     * @return the result of the subtraction
      */
     public final int subtract(final int x, final int y) {
         return x - y;
+    }
+
+    /**
+     * multiply 2 numbers.
+     * @param x First Operand.
+     * @param y Second Operand.
+     * @return the result of the multiplication
+     */
+    public final int multiply(final int x, final int y) {
+        return x * y;
     }
 }

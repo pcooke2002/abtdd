@@ -45,4 +45,17 @@ public class CalculatorController {
             @RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
         return calculatorService.subtract(firstNumber, secondNumber);
     }
+
+    /**
+     * Controller multiply function.
+     * @param firstNumber First Operand.
+     * @param secondNumber Second Operand.
+     * @return int The result of the multiply operation
+     */
+    @RequestMapping("/multiplyer")
+    public final int multiplyer(
+            @RequestParam(value = "firstNumber", defaultValue = "0") final int firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final int secondNumber) {
+        return calculatorService.multiply(firstNumber, secondNumber);
+    }
 }
