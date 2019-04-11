@@ -2,7 +2,6 @@ package learn.agile.demos.services;
 
 import org.springframework.stereotype.Service;
 
-
 /**
  * @author pcooke
  *
@@ -22,5 +21,15 @@ public class CalculatorService {
      */
     public final int add(final int x, final int y) {
         return x + y;
+}
+
+    /**
+     * subtract 2 numbers.
+     * @param x First Operand.
+     * @param y Second Operand.
+     * @return the result of the addition
+     */
+    public final int subtract(final int x, final int y) {
+        return x - y;
     }
 }

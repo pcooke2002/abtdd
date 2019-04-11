@@ -51,4 +51,14 @@ public class DemoSteps {
 	public void the_result_is(final int sum) throws Throwable {
 		assertEquals(demoPage.getCalculatorResults(), sum);
 	}
+
+	/**
+	 * @param arg1
+	 * @param arg2
+	 * @throws Exception
+	 */
+	@When("^I subtract the numbers (-?\\d+) and (-?\\d+)$")
+	public void i_subtract_the_numbers_and(final int arg1, final int arg2) throws Exception {
+		demoPage.subtractNumbers(arg1, arg2);
+	}
 }

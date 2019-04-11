@@ -122,5 +122,4 @@ public class TestConfig {
 		webDriver = new ChromeDriver(options);
 		return webDriver;
 	}
-
 }

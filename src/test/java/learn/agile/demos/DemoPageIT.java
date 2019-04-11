@@ -25,10 +25,21 @@ public class DemoPageIT {
 	 * @throws Exception
 	 */
 	@Test
-	public void simpleTest() throws Exception {
+	public void simpleAddTest() throws Exception {
 		demoPage.go();
 		demoPage.addNumbers(5, 5);
 		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
 		assertEquals(demoPage.getCalculatorResults(), 10);
+	}
+
+	/**
+	 * @throws Exception
+	 */
+	@Test
+	public void simpleSubtractTest() throws Exception {
+		demoPage.go();
+		demoPage.subtractNumbers(5, 5);
+		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
+		assertEquals(0, demoPage.getCalculatorResults());
 	}
 }
