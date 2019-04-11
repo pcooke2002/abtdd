@@ -24,7 +24,7 @@ public class DemoPageIT {
 	 */
 	@SuppressWarnings("deprecation")
 	@Test
-	public void simpleBasicTest() throws Exception {
+	public void simpleBasicAddTest() throws Exception {
 		demoPage.go();
 		demoPage.addNumbers(5f, 5f);
 		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
@@ -77,5 +77,17 @@ public class DemoPageIT {
 		demoPage.multiplyNumbers(5f, 5f);
 		Thread.sleep(100); // web driver on some OSs respond too quickly
 		assert (new Float(25f).equals(new Float(demoPage.getCalculatorResults())));
+	}
+	
+	/**
+	 * @throws Exception
+	 */
+	@SuppressWarnings("deprecation")
+	@Test
+	public void simpleDivideTest() throws Exception {
+		demoPage.go();
+		demoPage.divideNumbers(15.2324f, 5.333f);
+  	    Thread.sleep(100); // timing - for some reason on some OS's webdriver returns
+		assert (new Float(2.8562534f).equals(new Float(demoPage.getCalculatorResults())));
 	}
 }

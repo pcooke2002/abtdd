@@ -33,7 +33,6 @@ public class CalculatorService {
      */
     public final float subtract(final float x, final float y) {
         return x - y;
-
     }
 
     /**
@@ -43,5 +42,15 @@ public class CalculatorService {
      */
     public final float multiply(final float x, final float y) {
         return x * y;
+    }
+
+    /**
+     * divide 2 numbers.
+     * @param x First Operand.
+     * @param y Second Operand.
+     * @return the result of the divide.
+     */
+    public float divide(final float x, final float y) {
+        return x / y;
     }
 }

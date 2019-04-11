@@ -30,7 +30,6 @@ public class DemoSteps {
 		demoPage.go();
 	}
 
-
 	/**
 	 * @param sum
 	 * @throws Throwable
@@ -70,5 +69,15 @@ public class DemoSteps {
 	@When("^I multiply the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
 	public void iMultiplyTheNumbersAnd(final float x, final float y) throws Throwable {
 		demoPage.multiplyNumbers(x, y);
+	}
+	
+	/**
+	 * @param arg1
+	 * @param arg2
+	 * @throws Exception
+	 */
+	@When("^I divide (-?\\d+\\.?\\d*) by (-?\\d+\\.?\\d*)$")
+	public void iDivideTheNumbersBy(final float x, final float y) throws Throwable {
+		demoPage.divideNumbers(x, y);
 	}
 }

@@ -58,4 +58,18 @@ public class CalculatorController {
             @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
         return calculatorService.multiply(firstNumber, secondNumber);
     }
+
+
+     /**
+     * Controller divide function.
+     * @param firstNumber First Operand.
+     * @param secondNumber Second Operand.
+     * @return int The result of the divide operation
+     */
+    @RequestMapping("/divider")
+    public final float divider(
+            @RequestParam(value = "firstNumber", defaultValue = "0") final float firstNumber,
+            @RequestParam(value = "secondNumber", defaultValue = "0") final float secondNumber) {
+        return calculatorService.divide(firstNumber, secondNumber);
+    }
 }
