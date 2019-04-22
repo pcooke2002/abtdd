@@ -7,7 +7,6 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.ie.InternetExplorerOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -67,6 +66,7 @@ public class TestConfig {
 
 		String driverPath = IE_DRIVER;
 		System.setProperty("webdriver.ie.driver", driverPath);
+		@SuppressWarnings("deprecation")
 		WebDriver webDriver = new InternetExplorerDriver(capabilities);
 		return webDriver;
 	}

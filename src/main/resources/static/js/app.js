@@ -25,4 +25,3 @@ myApp.controller("calculatorController", function($http, $scope) {
         });
     }
 });
-

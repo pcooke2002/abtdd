@@ -26,7 +26,12 @@ public class CalculatorControllerIT {
 	CalculatorController calculatorController;
 
 	/**
-	 * @throws Exception
+
+	@Autowired
+	DemoPage demoPage;
+
+	/**
+	 * @throws Exception  If assert fails.
 	 */
 	@Test
 	public void testSubtracter() throws Exception {

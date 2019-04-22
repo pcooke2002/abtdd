@@ -12,7 +12,7 @@ public class CalculatorServiceTest {
 	CalculatorService calculatorService = new CalculatorService();
 
 	/**
-	 * @throws Exception
+	 * @throws Exception If assert fails.
 	 */
 	@Test
 	public void testSubtract() throws Exception {

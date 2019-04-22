@@ -25,8 +25,8 @@ public class DemoPage {
 	private Environment env;
 
 	/**
-	 * @param driver
-	 * @param env
+	 * @param driver The webdriver.
+	 * @param env The env in which the web driver runs.
 	 */
 	@Autowired
 	public DemoPage(final WebDriver driver, final Environment env) {
@@ -36,26 +36,28 @@ public class DemoPage {
 	}
 
 	/**
-	 * 
+	 * go to the entry page.
 	 */
 	public void go() {
 		driver.get("http://localhost:" + env.getProperty("local.server.port") + "/");
 	}
 
 	/**
-	 * @return results
+	 * return the result of operation from the web page.
+	 * @return results the results of the calculator operation
 	 * @throws InterruptedException
 	 */
 	public int getCalculatorResults() throws InterruptedException {
 		WebElement resultEl = (new WebDriverWait(driver, 300))
 				.until(ExpectedConditions.presenceOfElementLocated(By.id("calculator-result")));
-//		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
+		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
 		return Integer.parseInt(resultEl.getText());
 	}
 
 	/**
-	 * @param x
-	 * @param y
+	 * tell the web page to subtract 2 numbers
+	 * @param x first operand.
+	 * @param y second operand.
 	 */
 	public void subtractNumbers(final int x, final int y) {
 		driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));

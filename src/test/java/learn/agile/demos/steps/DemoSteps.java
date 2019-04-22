@@ -26,29 +26,30 @@ public class DemoSteps {
 	DemoPage demoPage;
 
 	/**
-	 * @throws Throwable
+	 * Go to index.html
 	 */
 	@Given("^I am on the demo page$")
-	public void i_am_on_the_demo_page() throws Throwable {
+	public void i_am_on_the_demo_page() {
 		demoPage.go();
 	}
 
 	/**
-	 * @param sum
-	 * @throws Throwable
+	 * Get the result from the webpage
+	 * @param result The expected value after the operation.
+	 * @throws Throwable If assert fails.
 	 */
 	@Then("^the result is (-?\\d+)$")
-	public void the_result_is(final int sum) throws Throwable {
-		assertEquals(demoPage.getCalculatorResults(), sum);
+	public void the_result_is(final int result) throws Throwable {
+		assertEquals(demoPage.getCalculatorResults(), result);
 	}
 
 	/**
-	 * @param arg1
-	 * @param arg2
-	 * @throws Exception
+	 * fill out the web page
+	 * @param x first operand.
+	 * @param y second operand.
 	 */
-	@When("^I subtract the numbers (-?\\d+) and (-?\\d+)$")
-	public void i_subtract_the_numbers_and(final int arg1, final int arg2) throws Exception {
-		demoPage.subtractNumbers(arg1, arg2);
+	@When("^I subtract (-?\\d+) from (-?\\d+)$")
+	public void i_subtract(final int y, final int x) {
+		demoPage.subtractNumbers(x, y);
 	}
 }
