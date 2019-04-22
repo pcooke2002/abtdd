@@ -26,26 +26,27 @@ public class DemoSteps {
 	DemoPage demoPage;
 
 	/**
-	 * @throws Throwable
+	 * go to first page.
 	 */
 	@Given("^I am on the demo page$")
-	public void i_am_on_the_demo_page() throws Throwable {
+	public void i_am_on_the_demo_page() {
 		demoPage.go();
 	}
 
 	/**
-	 * @param x
-	 * @param y
-	 * @throws Throwable
+	 * add 2 numbers.
+	 * @param x first operand.
+	 * @param y second operand.
 	 */
 	@When("^I add the numbers (-?\\d+) and (-?\\d+)$")
-	public void i_add_the_numbers_and(final int x, final int y) throws Throwable {
+	public void i_add_the_numbers_and(final int x, final int y) {
 		demoPage.addNumbers(x, y);
 	}
 
 	/**
+	 * get results from the page.
 	 * @param sum
-	 * @throws Throwable
+	 * @throws Throwable If assert fails.
 	 */
 	@Then("^the result is (-?\\d+)$")
 	public void the_result_is(final int sum) throws Throwable {

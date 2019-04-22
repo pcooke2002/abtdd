@@ -42,8 +42,8 @@ public class DemoPage {
     }
 
     /**
-     * @param x
-     * @param y
+     * @param x first operand.
+     * @param y second operand.
      */
     public void addNumbers(final int x, final int y) {
         driver.findElement(By.id("first-number")).sendKeys(Integer.toString(x));
@@ -52,8 +52,8 @@ public class DemoPage {
     }
 
     /**
-     * @return add results
-     * @throws InterruptedException 
+     * @return add results.
+     * @throws InterruptedException Thread sleep can throw an InterruptedException.  Just ignore
      */
     public int getCalculatorResults() throws InterruptedException {
         WebElement resultEl = (new WebDriverWait(driver, 300))

@@ -22,7 +22,7 @@ public class DemoPageIT {
 	DemoPage demoPage;
 
 	/**
-	 * @throws Exception
+	 * @throws Exception if assert fails.
 	 */
 	@Test
 	public void simpleTest() throws Exception {

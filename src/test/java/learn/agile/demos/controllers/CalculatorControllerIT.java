@@ -26,7 +26,7 @@ public class CalculatorControllerIT {
     CalculatorController calculatorController;
 
     /**
-     * @throws Exception
+     * @throws Exception If assert fails.
      */
     @Test
 	public void testAdder() throws Exception {
