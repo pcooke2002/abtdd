@@ -23,20 +23,21 @@ public class DemoSteps {
 	DemoPage demoPage;
 
 	/**
-	 * @throws Throwable
+	 * go to first page.
 	 */
 	@Given("^I am on the demo page$")
-	public void i_am_on_the_demo_page() throws Throwable {
+	public void i_am_on_the_demo_page() {
 		demoPage.go();
 	}
 
 	/**
-	 * @param x
-	 * @param y
-	 * @throws Throwable
+	 * add 2 numbers
+	 * 
+	 * @param x first operand.
+	 * @param y second operand.
 	 */
 	@When("^I add the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
-	public void i_add_the_numbers_and(final float x, final float y) throws Throwable {
+	public void i_add_the_numbers_and(final float x, final float y) {
 		demoPage.addNumbers(x, y);
 	}
 

@@ -10,7 +10,7 @@ public class CalculatorServiceTest {
 	CalculatorService calculatorService = new CalculatorService();
 
 	/**
-	 * @throws Exception
+	 * @throws Exception If assert fails.
 	 */
 	@SuppressWarnings("deprecation")
 	@Test
@@ -22,7 +22,7 @@ public class CalculatorServiceTest {
 	}
 
 	/**
-	 * @throws Exception
+	 * @throws Exception If assert fails.
 	 */
 	@SuppressWarnings("deprecation")
 	@Test

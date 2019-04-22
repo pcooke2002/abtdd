@@ -20,7 +20,7 @@ public class DemoPageIT {
 	DemoPage demoPage;
 
 	/**
-	 * @throws Exception
+	 * @throws Exception if assert fails.
 	 */
 	@SuppressWarnings("deprecation")
 	@Test
@@ -32,7 +32,7 @@ public class DemoPageIT {
 	}
 	
 	/**
-	 * @throws Exception
+	 * @throws Exception if assert fails.
 	 */
 	@SuppressWarnings("deprecation")
 	@Test
