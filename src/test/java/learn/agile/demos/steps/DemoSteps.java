@@ -24,10 +24,10 @@ public class DemoSteps {
 	DemoPage demoPage;
 
 	/**
-	 * @throws Throwable
+	 * Go to index.html
 	 */
 	@Given("^I am on the demo page$")
-	public void i_am_on_the_demo_page() throws Throwable {
+	public void i_am_on_the_demo_page() {
 		demoPage.go();
 	}
 

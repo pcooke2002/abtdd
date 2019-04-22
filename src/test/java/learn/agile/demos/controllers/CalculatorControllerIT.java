@@ -24,7 +24,7 @@ public class CalculatorControllerIT {
 	CalculatorController calculatorController;
 
 	/**
-	 * @throws Exception
+	 * @throws Exception  If assert fails.
 	 */
 	@SuppressWarnings("deprecation")
 	@Test
