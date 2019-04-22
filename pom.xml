@@ -7,18 +7,18 @@
 
 	<organization>
 		<name>pcooke</name>
-		<url>http://github.com/pcooke2002/atddbdd</url>
+		<url>http://github.com/pcooke2002/aabtdd</url>
 	</organization>
-	<url>http://github.com/pcooke2002/atddbdd</url>
+	<url>http://github.com/pcooke2002/aabtdd</url>
 	<groupId>learn.agile</groupId>
-	<artifactId>atddbdd</artifactId>
+	<artifactId>aabtdd</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	
 
 
-	<name>atdd demo</name>
-	<description>Demo project for teaching ATDD and BDD using Spring Boot</description>
+	<name>acceptance automated behavior test driven development demo</name>
+	<description>Demo project for teaching ATDD, aTTD, and BDD using Spring Boot</description>
 
 	<contributors>
 		<contributor>
