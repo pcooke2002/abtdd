@@ -42,7 +42,7 @@
 	</developers>
 	<licenses>
 		<license>
-			<comments>may not be used for production or commercial uage.  May only be used for training.  This product may not be altered and redistributed for financial compensaton.</comments>
+			<comments>may not be used for production or commercial uage.  May only be used for training and experimentation.  This product may not be altered and redistributed. Use at your own risk.</comments>
 			<name>for learning only.  Cannot be used for production or commercial purposes</name>
 			<distribution>manual</distribution>
 		</license>
