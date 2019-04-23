@@ -30,6 +30,5 @@ public class DemoPageIT {
 		demoPage.subtractNumbers(5, 5);
 		Thread.sleep(100); // timing - for some reason on some OS's webdriver returns too quickly;
 		assertEquals(0, demoPage.getCalculatorResults());
-
 	}
 }
