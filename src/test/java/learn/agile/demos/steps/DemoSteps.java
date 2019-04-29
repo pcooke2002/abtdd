@@ -32,8 +32,9 @@ public class DemoSteps {
 	}
 
 	/**
-	 * @param sum
-	 * @throws Throwable
+	 * Get the result from the webpage
+	 * @param result The expected value after the operation.
+	 * @throws Throwable If assert fails.
 	 */
 	@SuppressWarnings("deprecation")
 	@Then("^the result is (-?\\d+\\.?\\d*)$")
@@ -42,9 +43,9 @@ public class DemoSteps {
 	}
 
 	/**
-	 * @param arg1
-	 * @param arg2
-	 * @throws Exception
+	 * fill out the web page
+	 * @param x first operand.
+	 * @param y second operand.
 	 */
 	@When("^I subtract the numbers (-?\\d+\\.?\\d*) and (-?\\d+\\.?\\d*)$")
 	public void i_subtract_the_numbers_and(final float x, final float y) throws Exception {
