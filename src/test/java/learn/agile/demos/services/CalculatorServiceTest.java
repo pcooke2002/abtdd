@@ -12,7 +12,7 @@ public class CalculatorServiceTest {
 	CalculatorService calculatorService = new CalculatorService();
 
 	/**
-	 * @throws Exception
+	 * @throws Exception If assert fails.
 	 */
 	@Test
 	public void testMultipyInteger() throws Exception {
@@ -23,7 +23,7 @@ public class CalculatorServiceTest {
 	}
 
 	/**
-	 * @throws Exception
+	 * @throws Exception If assert fails.
 	 */
 	@Test
 	public void testMultiplyWithNegativeInteger() throws Exception {
@@ -33,5 +33,4 @@ public class CalculatorServiceTest {
 		assertEquals(-50, calculatorService.multiply(5, -10));
 		assertEquals(-1875, calculatorService.multiply(-75, 25));
 	}
-
 }

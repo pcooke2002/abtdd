@@ -26,7 +26,7 @@ public class DemoSteps {
 	DemoPage demoPage;
 
 	/**
-	 * @throws Throwable
+	 * Go to index.html.
 	 */
 	@Given("^I am on the demo page$")
 	public void i_am_on_the_demo_page() throws Throwable {
@@ -34,8 +34,10 @@ public class DemoSteps {
 	}
 
 	/**
-	 * @param sum
-	 * @throws Throwable
+	 * Get the result from the webpage
+	 * 
+	 * @param result The expected value after the operation.
+	 * @throws Throwable If assert fails.
 	 */
 	@Then("^the result is (-?\\d+)$")
 	public void the_result_is(final int sum) throws Throwable {
@@ -43,9 +45,10 @@ public class DemoSteps {
 	}
 
 	/**
-	 * @param x
-	 * @param y
-	 * @throws Throwable
+	 * fill out the web page
+	 * 
+	 * @param x first operand.
+	 * @param y second operand.
 	 */
 	@When("^I multiply the numbers (-?\\d+) and (-?\\d+)$")
 	public void iMultiplyTheNumbersAnd(int x, int y) throws Throwable {

@@ -14,7 +14,7 @@ public class CalculatorService {
     private final int notUsedVariableForScanBugs = 0;
 
     /**
-     * add 2 numbers.
+     * Multiply 2 numbers.
      * @param x First Operand.
      * @param y Second Operand.
      * @return the result of the multiplication

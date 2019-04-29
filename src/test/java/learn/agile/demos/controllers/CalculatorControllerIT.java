@@ -29,7 +29,7 @@ public class CalculatorControllerIT {
 	CalculatorController calculatorController;
 
 	/**
-	 * @throws Exception
+	 * @throws Exception If assert fails.
 	 */
 	@Test
 	public void testMultiplyer() throws Exception {
