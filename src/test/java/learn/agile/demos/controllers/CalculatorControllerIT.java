@@ -26,11 +26,6 @@ public class CalculatorControllerIT {
 	CalculatorController calculatorController;
 
 	/**
-
-	@Autowired
-	DemoPage demoPage;
-
-	/**
 	 * @throws Exception  If assert fails.
 	 */
 	@Test
